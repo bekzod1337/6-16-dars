@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar .active{
+    @apply text-fifth;
+}
+
+@layer components{
+    .btn{
+        @apply px-8 py-3 rounded-full flex gap-2 items-center transition-all;
+    }
+    .btn-primary{
+        @apply bg-second text-white hover:bg-opacity-80;
+    }
+    .btn-outline-primary{
+        @apply border-second border text-second hover:bg-second hover:text-white;
+    }
+}
+
+.open{
+    display: flex !important;
+    animation: open .5s ease forwards;
+}
+@keyframes open {
+    from{
+        transform: translateX(100%);
+    }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
